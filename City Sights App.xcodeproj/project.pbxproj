@@ -13,6 +13,8 @@
 		1F97582C26D5DDFA00B3B3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97582B26D5DDFA00B3B3B0 /* Assets.xcassets */; };
 		1F97582F26D5DDFA00B3B3B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97582E26D5DDFA00B3B3B0 /* Preview Assets.xcassets */; };
 		1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97583D26D5DF1300B3B3B0 /* ContentModel.swift */; };
+		1FCABC2826D62B7900D6FD1B /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC2726D62B7900D6FD1B /* Business.swift */; };
+		1FCABC2C26D62E4900D6FD1B /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC2B26D62E4900D6FD1B /* BusinessSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1F97582E26D5DDFA00B3B3B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1F97583026D5DDFA00B3B3B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F97583D26D5DF1300B3B3B0 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
+		1FCABC2726D62B7900D6FD1B /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		1FCABC2B26D62E4900D6FD1B /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		1F97583726D5DE2300B3B3B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1FCABC2726D62B7900D6FD1B /* Business.swift */,
+				1FCABC2B26D62E4900D6FD1B /* BusinessSearch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,9 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F97582A26D5DDEE00B3B3B0 /* LaunchView.swift in Sources */,
+				1FCABC2826D62B7900D6FD1B /* Business.swift in Sources */,
 				1F97582826D5DDED00B3B3B0 /* CitySightsApp.swift in Sources */,
 				1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */,
 				1F0CE05C26D5F6D100F15115 /* Constants.swift in Sources */,
+				1FCABC2C26D62E4900D6FD1B /* BusinessSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
