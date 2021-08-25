@@ -36,3 +36,4 @@ struct BusinessRow: View {
         
     }
 }
+
