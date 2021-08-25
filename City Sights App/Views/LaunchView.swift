@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct LaunchView: View {
+    @EnvironmentObject var model: ContentModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        // Detect authorization status
+        
+        if model.authorisationState == .notDetermined {
+            // undetermined: onboarding view
+            
+        }
+        else if model.authorisationState == .denied {
+            // denied: denied view
+
+        }
+        else {
+            // authorised: home view
+            HomeView()
+        }
+        
     }
 }
 

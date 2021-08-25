@@ -13,7 +13,9 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     var locationManager = CLLocationManager()
     
     @Published var restaurants = [Business]()
-    @Published var arts = [Business]()
+    @Published var sights = [Business]()
+    
+    @Published var authorisationState = CLAuthorizationStatus.notDetermined
     
     
     // NSObject needed for ContentModel to conform to CLLocationManagerDelegate
@@ -32,6 +34,10 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     // MARK: Location Manager Delegate Methods
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        
+        // update authorisationState
+        authorisationState = locationManager.authorizationStatus
+        
         if locationManager.authorizationStatus == .authorizedAlways || locationManager.authorizationStatus == .authorizedWhenInUse  {
             // We have permission, update location
             locationManager.startUpdatingLocation()
@@ -69,7 +75,7 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
             URLQueryItem(name: "longitude", value: String(location.coordinate.longitude)),
             URLQueryItem(name: "categories", value: category),
-            URLQueryItem(name: "limt", value: "6")
+            URLQueryItem(name: "limit", value: "6")
         ]
         
         let url = urlComponents?.url
@@ -94,14 +100,17 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                         let result = try decoder.decode(BusinessSearch.self, from: data!)
                         
                         // Assign business by category
-                        switch category {
-                        case "restaurants":
-                            self.restaurants = result.businesses
-                        case "arts":
-                            self.arts = result.businesses
-                        default:
-                            break
+                        DispatchQueue.main.async {
+                            switch category {
+                            case "restaurants":
+                                self.restaurants = result.businesses
+                            case "arts":
+                                self.sights = result.businesses
+                            default:
+                                break
+                            }
                         }
+                        
                     }
                     catch {
                         
