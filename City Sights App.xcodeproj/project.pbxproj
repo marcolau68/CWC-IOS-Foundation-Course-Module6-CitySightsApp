@@ -19,6 +19,7 @@
 		1FCABC3E26D637CB00D6FD1B /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC3D26D637CB00D6FD1B /* BusinessList.swift */; };
 		1FCABC4226D639CC00D6FD1B /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC4126D639CC00D6FD1B /* BusinessSectionHeader.swift */; };
 		1FCABC4526D63A2D00D6FD1B /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC4426D63A2D00D6FD1B /* BusinessSection.swift */; };
+		1FCABC4826D63DFD00D6FD1B /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC4726D63DFD00D6FD1B /* BusinessRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1FCABC3D26D637CB00D6FD1B /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		1FCABC4126D639CC00D6FD1B /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
 		1FCABC4426D63A2D00D6FD1B /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
+		1FCABC4726D63DFD00D6FD1B /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				1FCABC3D26D637CB00D6FD1B /* BusinessList.swift */,
 				1FCABC4126D639CC00D6FD1B /* BusinessSectionHeader.swift */,
 				1FCABC4426D63A2D00D6FD1B /* BusinessSection.swift */,
+				1FCABC4726D63DFD00D6FD1B /* BusinessRow.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				1F97582A26D5DDEE00B3B3B0 /* LaunchView.swift in Sources */,
 				1FCABC3A26D6348000D6FD1B /* HomeView.swift in Sources */,
 				1FCABC2826D62B7900D6FD1B /* Business.swift in Sources */,
+				1FCABC4826D63DFD00D6FD1B /* BusinessRow.swift in Sources */,
 				1FCABC4226D639CC00D6FD1B /* BusinessSectionHeader.swift in Sources */,
 				1F97582826D5DDED00B3B3B0 /* CitySightsApp.swift in Sources */,
 				1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */,
