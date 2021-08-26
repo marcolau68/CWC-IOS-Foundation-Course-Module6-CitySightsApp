@@ -99,13 +99,24 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
                     do {
                         let result = try decoder.decode(BusinessSearch.self, from: data!)
                         
+                        var businesses = result.businesses
+                        
+                        // sort businesses by distance, if b1 is closer than b2, b1 goes before b2
+                        businesses.sort { (b1, b2) -> Bool in
+                            return b1.distance ?? 0 < b2.distance ?? 0
+                        }
+                        
+                        for b in businesses {
+                            b.getImageData()
+                        }
+                        
                         // Assign business by category
                         DispatchQueue.main.async {
                             switch category {
                             case "restaurants":
-                                self.restaurants = result.businesses
+                                self.restaurants = businesses
                             case "arts":
-                                self.sights = result.businesses
+                                self.sights = businesses
                             default:
                                 break
                             }

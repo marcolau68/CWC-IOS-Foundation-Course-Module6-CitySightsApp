@@ -22,10 +22,12 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Image(systemName: "location")
-                        Text("Hong Kong For Now")
+                        Text("Hong Kong")
                         Spacer()
                         Text("Switch to Map View")
                     }
+                    .padding(.horizontal, 10)
+                    
                     Divider()
                     
                     BusinessList()
