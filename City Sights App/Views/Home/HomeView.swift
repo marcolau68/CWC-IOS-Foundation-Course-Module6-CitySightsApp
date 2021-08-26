@@ -17,6 +17,7 @@ struct HomeView: View {
             NavigationView {
                 if isMapShowing {
                     // Show map
+                    BusinessMap()
                 }
                 else {
                     // Show list
@@ -25,7 +26,9 @@ struct HomeView: View {
                             Image(systemName: "location")
                             Text("Hong Kong")
                             Spacer()
-                            Text("Switch to Map View")
+                            Button("Switch to Map View", action: {
+                                isMapShowing = true
+                            })
                         }
                         .padding(.horizontal, 10)
                         

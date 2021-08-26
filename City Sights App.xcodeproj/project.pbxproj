@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F0CE05C26D5F6D100F15115 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0CE05B26D5F6D100F15115 /* Constants.swift */; };
+		1F3D9E6A26D788AB0071DF8A /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D9E6926D788AB0071DF8A /* BusinessMap.swift */; };
 		1F97582826D5DDED00B3B3B0 /* CitySightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97582726D5DDED00B3B3B0 /* CitySightsApp.swift */; };
 		1F97582A26D5DDEE00B3B3B0 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97582926D5DDEE00B3B3B0 /* LaunchView.swift */; };
 		1F97582C26D5DDFA00B3B3B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97582B26D5DDFA00B3B3B0 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		1F0CE05B26D5F6D100F15115 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1F3D9E6926D788AB0071DF8A /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 		1F97582426D5DDED00B3B3B0 /* City Sights App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City Sights App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F97582726D5DDED00B3B3B0 /* CitySightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySightsApp.swift; sourceTree = "<group>"; };
 		1F97582926D5DDEE00B3B3B0 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3D9E6826D788890071DF8A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1F3D9E6926D788AB0071DF8A /* BusinessMap.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1F97581B26D5DDED00B3B3B0 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 			children = (
 				1FCABC3926D6348000D6FD1B /* HomeView.swift */,
 				1FCABC3C26D637BC00D6FD1B /* List */,
+				1F3D9E6826D788890071DF8A /* Map */,
 				1FC903C326D73D2D00D7741C /* Detail */,
 			);
 			path = Home;
@@ -241,6 +252,7 @@
 				1F97582826D5DDED00B3B3B0 /* CitySightsApp.swift in Sources */,
 				1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */,
 				1FCABC3E26D637CB00D6FD1B /* BusinessList.swift in Sources */,
+				1F3D9E6A26D788AB0071DF8A /* BusinessMap.swift in Sources */,
 				1FCABC4526D63A2D00D6FD1B /* BusinessSection.swift in Sources */,
 				1F0CE05C26D5F6D100F15115 /* Constants.swift in Sources */,
 				1FCABC2C26D62E4900D6FD1B /* BusinessSearch.swift in Sources */,
