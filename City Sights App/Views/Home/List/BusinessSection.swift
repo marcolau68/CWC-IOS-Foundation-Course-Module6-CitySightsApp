@@ -14,7 +14,15 @@ struct BusinessSection: View {
     var body: some View {
         Section (header: BusinessSectionHeader(title: title))  {
             ForEach(businessList) { business in
-                BusinessRow(business: business)
+                
+                NavigationLink(
+                    destination: BusinessDetailView(business: business),
+                    label: {
+                        BusinessRow(business: business)
+                    })
+                    .accentColor(.black)
+                
+               
             }
         }
     }

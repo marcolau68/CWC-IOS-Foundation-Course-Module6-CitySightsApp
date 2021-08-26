@@ -14,25 +14,28 @@ struct HomeView: View {
     var body: some View {
         if model.restaurants.count != 0 || model.sights.count != 0 {
             
-            if isMapShowing {
-                // Show map
-            }
-            else {
-                // Show list
-                VStack {
-                    HStack {
-                        Image(systemName: "location")
-                        Text("Hong Kong")
-                        Spacer()
-                        Text("Switch to Map View")
+            NavigationView {
+                if isMapShowing {
+                    // Show map
+                }
+                else {
+                    // Show list
+                    VStack {
+                        HStack {
+                            Image(systemName: "location")
+                            Text("Hong Kong")
+                            Spacer()
+                            Text("Switch to Map View")
+                        }
+                        .padding(.horizontal, 10)
+                        
+                        Divider()
+                        
+                        BusinessList()
                     }
-                    .padding(.horizontal, 10)
-                    
-                    Divider()
-                    
-                    BusinessList()
                 }
             }
+            .navigationBarHidden(true)
         }
         else {
             ProgressView()
