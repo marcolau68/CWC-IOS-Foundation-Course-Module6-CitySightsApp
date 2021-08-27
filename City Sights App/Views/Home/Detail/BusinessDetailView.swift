@@ -53,6 +53,7 @@ struct BusinessDetailView: View {
 //                    }
 //                }
                 
+                // Address doesn't show, because displayAddress always seem to be nil, although it really isn't
                 if business.location?.displayAddress != nil {
                     ForEach(business.location!.displayAddress!, id: \.self) { line in
                         Text(line)

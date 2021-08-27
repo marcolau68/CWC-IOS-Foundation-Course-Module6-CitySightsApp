@@ -17,12 +17,35 @@ struct HomeView: View {
             
             NavigationView {
                 if isMapShowing {
-                    // Show map
-                    BusinessMap(selectedBusiness: $selectedBusiness)
-                    .ignoresSafeArea()
-                        .sheet(item: $selectedBusiness) { business in
-                            BusinessDetailView(business: business)
+                    
+                    ZStack(alignment: .top) {
+                        // Show map
+                        BusinessMap(selectedBusiness: $selectedBusiness)
+                        .ignoresSafeArea()
+                            .sheet(item: $selectedBusiness) { business in
+                                BusinessDetailView(business: business)
+                            }
+                        
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(.white)
+                                .frame(height: 48)
+                                .cornerRadius(5)
+                            
+                            HStack {
+                                Image(systemName: "location")
+                                Text("Hong Kong")
+                                Spacer()
+                                Button("Switch to List View", action: {
+                                    isMapShowing = false
+                                })
+                            }
+                            .padding()
                         }
+                        .padding(.horizontal)
+                    }
+                    
+                    
                 }
                 else {
                     // Show list
