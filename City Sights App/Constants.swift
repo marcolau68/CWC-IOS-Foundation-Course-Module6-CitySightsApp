@@ -13,6 +13,7 @@ struct Constants {
     static var yelpSearchHTTPMethod = "GET"
     static var restaurantKey = "restaurants"
     static var sightsKey = "arts"
+    static var reusableAnnotationId = "business"
     
 
 }
