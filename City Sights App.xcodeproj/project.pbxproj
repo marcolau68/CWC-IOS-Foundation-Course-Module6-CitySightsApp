@@ -19,6 +19,8 @@
 		1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97583D26D5DF1300B3B3B0 /* ContentModel.swift */; };
 		1FB821C926D8BD4E00F084E9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB821C826D8BD4E00F084E9 /* OnboardingView.swift */; };
 		1FB821CC26D8C65A00F084E9 /* DeniedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB821CB26D8C65A00F084E9 /* DeniedView.swift */; };
+		1FB821CF26D8CAF000F084E9 /* Yelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB821CE26D8CAF000F084E9 /* Yelp.swift */; };
+		1FB821D426D8CD5700F084E9 /* DashedDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB821D326D8CD5700F084E9 /* DashedDivider.swift */; };
 		1FC903C526D73D4A00D7741C /* BusinessDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC903C426D73D4A00D7741C /* BusinessDetailView.swift */; };
 		1FCABC2826D62B7900D6FD1B /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC2726D62B7900D6FD1B /* Business.swift */; };
 		1FCABC2C26D62E4900D6FD1B /* BusinessSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCABC2B26D62E4900D6FD1B /* BusinessSearch.swift */; };
@@ -44,6 +46,8 @@
 		1F97583D26D5DF1300B3B3B0 /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		1FB821C826D8BD4E00F084E9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1FB821CB26D8C65A00F084E9 /* DeniedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeniedView.swift; sourceTree = "<group>"; };
+		1FB821CE26D8CAF000F084E9 /* Yelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp.swift; sourceTree = "<group>"; };
+		1FB821D326D8CD5700F084E9 /* DashedDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedDivider.swift; sourceTree = "<group>"; };
 		1FC903C426D73D4A00D7741C /* BusinessDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailView.swift; sourceTree = "<group>"; };
 		1FCABC2726D62B7900D6FD1B /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		1FCABC2B26D62E4900D6FD1B /* BusinessSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSearch.swift; sourceTree = "<group>"; };
@@ -134,11 +138,21 @@
 			isa = PBXGroup;
 			children = (
 				1F97582926D5DDEE00B3B3B0 /* LaunchView.swift */,
+				1FB821D226D8CD4700F084E9 /* Common */,
 				1FCABC3626D6345400D6FD1B /* Home */,
 				1FCABC3826D6346000D6FD1B /* Denied */,
 				1FCABC3726D6345900D6FD1B /* Onboarding */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1FB821D226D8CD4700F084E9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1FB821CE26D8CAF000F084E9 /* Yelp.swift */,
+				1FB821D326D8CD5700F084E9 /* DashedDivider.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		1FC903C326D73D2D00D7741C /* Detail */ = {
@@ -268,11 +282,13 @@
 				1FCABC4226D639CC00D6FD1B /* BusinessSectionHeader.swift in Sources */,
 				1F97582826D5DDED00B3B3B0 /* CitySightsApp.swift in Sources */,
 				1FB821CC26D8C65A00F084E9 /* DeniedView.swift in Sources */,
+				1FB821D426D8CD5700F084E9 /* DashedDivider.swift in Sources */,
 				1F97583E26D5DF1300B3B3B0 /* ContentModel.swift in Sources */,
 				1F6E74BF26D891B100735F47 /* BusinessTitle.swift in Sources */,
 				1FCABC3E26D637CB00D6FD1B /* BusinessList.swift in Sources */,
 				1F3D9E6A26D788AB0071DF8A /* BusinessMap.swift in Sources */,
 				1FCABC4526D63A2D00D6FD1B /* BusinessSection.swift in Sources */,
+				1FB821CF26D8CAF000F084E9 /* Yelp.swift in Sources */,
 				1F0CE05C26D5F6D100F15115 /* Constants.swift in Sources */,
 				1FB821C926D8BD4E00F084E9 /* OnboardingView.swift in Sources */,
 				1FCABC2C26D62E4900D6FD1B /* BusinessSearch.swift in Sources */,

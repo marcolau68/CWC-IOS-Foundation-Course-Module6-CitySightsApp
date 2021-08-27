@@ -17,6 +17,8 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
     
     @Published var authorisationState = CLAuthorizationStatus.notDetermined
     
+    @Published var placeMark: CLPlacemark?
+    
     
     // NSObject needed for ContentModel to conform to CLLocationManagerDelegate
     // NSObject has its own init method, needs to override
@@ -57,6 +59,14 @@ class ContentModel: NSObject, CLLocationManagerDelegate, ObservableObject {
             // If we have the location, send cords to Yelp API
             getBusinesses(category: Constants.restaurantKey, location: userLocation!)
             getBusinesses(category: Constants.sightsKey, location: userLocation!)
+            
+            // Get the place mark of the user
+            let geoCoder = CLGeocoder()
+            geoCoder.reverseGeocodeLocation(userLocation!) { (placeMarks, error) in
+                if error == nil && placeMarks != nil {
+                    self.placeMark = placeMarks?.first
+                }
+            }
             
             // Stop updating after we get it once
             locationManager.stopUpdatingLocation()

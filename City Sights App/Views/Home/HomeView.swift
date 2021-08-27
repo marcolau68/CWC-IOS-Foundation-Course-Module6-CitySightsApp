@@ -34,7 +34,7 @@ struct HomeView: View {
                             
                             HStack {
                                 Image(systemName: "location")
-                                Text("Hong Kong")
+                                Text(model.placeMark?.locality ?? "")
                                 Spacer()
                                 Button("Switch to List View", action: {
                                     isMapShowing = false
@@ -52,7 +52,7 @@ struct HomeView: View {
                     VStack {
                         HStack {
                             Image(systemName: "location")
-                            Text("Hong Kong")
+                            Text(model.placeMark?.locality ?? "")
                             Spacer()
                             Button("Switch to Map View", action: {
                                 isMapShowing = true
@@ -62,11 +62,18 @@ struct HomeView: View {
                         
                         Divider()
                         
-                        BusinessList()
+                        ZStack(alignment: .top) {
+                            BusinessList()
+                            
+                            HStack {
+                                Spacer()
+                                Yelp(link: "http://yelp.ca")
+                            }
+                        }
                     }
+                    .navigationBarHidden(true)
                 }
             }
-            .navigationBarHidden(true)
         }
         else {
             ProgressView()
