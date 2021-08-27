@@ -44,11 +44,18 @@ struct BusinessDetailView: View {
                     .font(.title)
                 
                 // Address and Yelp image
-                if business.location != nil {
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text("\(business.location!.address1!), \(business.location!.city!)")
-                            .font(.caption)
-                        Text("\(business.location!.state!), \(business.location!.country!)")
+//                if business.location != nil {
+//                    VStack(alignment: .leading, spacing: 5) {
+//                        Text("\(business.location!.address1!), \(business.location!.city!)")
+//                            .font(.caption)
+//                        Text("\(business.location!.state!), \(business.location!.country!)")
+//                            .font(.caption)
+//                    }
+//                }
+                
+                if business.location?.displayAddress != nil {
+                    ForEach(business.location!.displayAddress!, id: \.self) { line in
+                        Text(line)
                             .font(.caption)
                     }
                 }
