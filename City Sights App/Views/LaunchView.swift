@@ -15,11 +15,11 @@ struct LaunchView: View {
         
         if model.authorisationState == .notDetermined {
             // undetermined: onboarding view
-            
+            OnboardingView()
         }
         else if model.authorisationState == .denied {
             // denied: denied view
-
+            DeniedView()
         }
         else {
             // authorised: home view
